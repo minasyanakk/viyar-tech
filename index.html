@@ -386,7 +386,192 @@
         }
         .footer-links a:hover { color: var(--white); }
         .footer-copy { font-family: 'DM Mono', monospace; font-size: .62rem; color: rgba(136,132,128,.4); letter-spacing: .1em; }
-        /* GRAIN */
+        /* ── VIYARPRO SPOTLIGHT ── */
+        .viyarpro {
+            padding: 130px 52px;
+            border-top: 1px solid var(--line);
+        }
+        .vp-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        .vp-hl {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(4rem, 8vw, 9rem);
+            line-height: .88;
+            letter-spacing: .02em;
+            margin-bottom: 12px;
+        }
+        .vp-tagline {
+            font-family: 'DM Mono', monospace;
+            font-size: .72rem;
+            letter-spacing: .14em;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+        .vp-desc {
+            font-size: .9rem;
+            line-height: 1.78;
+            color: rgba(244,241,235,.45);
+            margin-bottom: 44px;
+            max-width: 480px;
+        }
+        .vp-caps {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            margin-bottom: 44px;
+            border: 1px solid var(--line);
+        }
+        .vp-cap {
+            padding: 24px 20px;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            transition: background .3s;
+        }
+        .vp-cap:nth-child(even) { border-right: none; }
+        .vp-cap:nth-child(3), .vp-cap:nth-child(4) { border-bottom: none; }
+        .vp-cap:hover { background: rgba(196,170,132,.04); }
+        .vp-cap-title {
+            font-size: .82rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 8px;
+            letter-spacing: .015em;
+        }
+        .vp-cap-desc {
+            font-size: .76rem;
+            line-height: 1.6;
+            color: rgba(244,241,235,.38);
+        }
+        .vp-links { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        /* right: numbers */
+        .vp-right { display: flex; flex-direction: column; gap: 2px; }
+        .vp-nums {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border: 1px solid var(--line);
+            margin-bottom: 2px;
+        }
+        .vp-num-item {
+            padding: 28px 20px;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            transition: background .3s;
+        }
+        .vp-num-item:nth-child(3n) { border-right: none; }
+        .vp-num-item:nth-child(4),.vp-num-item:nth-child(5),.vp-num-item:nth-child(6) { border-bottom: none; }
+        .vp-num-item:hover { background: rgba(196,170,132,.03); }
+        .vp-big {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            line-height: 1;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .vp-plus { font-size: .7em; color: var(--accent); vertical-align: top; }
+        .vp-nlbl {
+            font-size: .7rem;
+            line-height: 1.4;
+            color: rgba(244,241,235,.35);
+            font-family: 'DM Mono', monospace;
+            letter-spacing: .04em;
+        }
+        .vp-subcards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+        }
+        .vp-sub {
+            padding: 28px 24px;
+            background: rgba(244,241,235,.03);
+            border: 1px solid var(--line);
+            transition: background .3s, border-color .3s;
+        }
+        .vp-sub:hover { background: rgba(196,170,132,.06); border-color: rgba(196,170,132,.2); }
+        .vp-sub-label {
+            font-family: 'DM Mono', monospace;
+            font-size: .58rem;
+            letter-spacing: .18em;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .vp-sub-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: .04em;
+            margin-bottom: 10px;
+        }
+        .vp-sub-desc {
+            font-size: .76rem;
+            line-height: 1.6;
+            color: rgba(244,241,235,.38);
+        }
+
+        /* ── OTHER PRODUCTS ── */
+        .other-products { border-top: 1px solid var(--line); }
+        .op-wrap { padding: 0 52px 130px; }
+        .op-hd { padding: 64px 0 0; margin-bottom: 0; }
+        .op-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 1px solid var(--line);
+            margin-top: 48px;
+        }
+        .op-card {
+            padding: 44px 0;
+            border-right: 1px solid var(--line);
+            padding-right: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: background .3s;
+        }
+        .op-card:last-child { border-right: none; padding-left: 40px; padding-right: 0; }
+        .op-card::before {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, transparent, rgba(196,170,132,.03));
+            opacity: 0; transition: opacity .5s;
+        }
+        .op-card:hover::before { opacity: 1; }
+        .op-num {
+            font-family: 'DM Mono', monospace; font-size: .6rem;
+            color: var(--accent); letter-spacing: .15em; margin-bottom: 28px;
+        }
+        .op-name {
+            font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem;
+            letter-spacing: .04em; margin-bottom: 14px;
+        }
+        .op-desc { font-size: .84rem; line-height: 1.72; color: rgba(244,241,235,.4); }
+
+        /* responsive additions */
+        @media (max-width:1024px) {
+            .viyarpro { padding: 80px 32px; }
+            .vp-inner { grid-template-columns: 1fr; gap: 56px; }
+            .vp-hl { font-size: clamp(3.5rem, 8vw, 6rem); }
+            .vp-nums { grid-template-columns: 1fr 1fr; }
+            .vp-num-item:nth-child(3n) { border-right: 1px solid var(--line); }
+            .vp-num-item:nth-child(2n) { border-right: none; }
+            .vp-num-item:nth-child(5),.vp-num-item:nth-child(6) { border-bottom: none; }
+            .vp-num-item:nth-child(3) { border-bottom: 1px solid var(--line); }
+            .op-wrap { padding-left: 32px; padding-right: 32px; }
+        }
+        @media (max-width:640px) {
+            .viyarpro { padding: 60px 20px; }
+            .vp-caps { grid-template-columns: 1fr; }
+            .vp-cap { border-right: none; }
+            .vp-cap:nth-child(3) { border-bottom: 1px solid var(--line); }
+            .vp-nums { grid-template-columns: 1fr 1fr; }
+            .vp-subcards { grid-template-columns: 1fr; }
+            .vp-links { flex-direction: column; }
+            .op-wrap { padding-left: 20px; padding-right: 20px; padding-bottom: 60px; }
+            .op-grid { grid-template-columns: 1fr; }
+            .op-card,.op-card:last-child { border-right: none; padding-left: 0; padding-right: 0; border-bottom: 1px solid var(--line); }
+        }
         body::after {
             content: ''; position: fixed; inset: 0;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -583,7 +768,7 @@
     <a href="#home" class="nav-logo">ViyarTech</a>
     <ul class="nav-links">
         <li><a href="#services">Послуги</a></li>
-        <li><a href="#products">Продукти</a></li>
+        <li><a href="#products">ViyarPro</a></li>
         <li><a href="#ai">AI</a></li>
         <li><a href="#contact">Контакти</a></li>
     </ul>
@@ -594,7 +779,7 @@
 
 <div class="mobile-menu" id="mobileMenu">
     <a href="#services" class="mm-link">Послуги</a>
-    <a href="#products" class="mm-link">Продукти</a>
+    <a href="#products" class="mm-link">ViyarPro</a>
     <a href="#ai" class="mm-link">AI</a>
     <a href="#contact" class="mm-link">Контакти</a>
     <div class="mobile-menu-contact">info@viyar.tech</div>
@@ -662,43 +847,107 @@
     </div>
 </section>
 
-<section class="products" id="products">
-    <div class="prod-hd reveal">
-        <h2 class="prod-hl">Продукти</h2>
-    </div>
-    <div class="prod-grid">
-        <div class="pcard reveal">
-            <div class="pcard-bg"></div>
-            <div class="pcard-ico">🏗️</div>
-            <div class="pcard-body">
-                <div class="pcard-tag">Для клієнтів</div>
-                <div class="pcard-name">Online-конструктор меблів</div>
-                <p class="pcard-desc">Комплексне рішення для управління виробництвом, логістикою та продажами, що оптимізує бізнес-процеси.</p>
+<!-- FEATURED PRODUCT: ViyarPro -->
+<section class="viyarpro" id="products">
+    <div class="vp-inner">
+        <!-- left col -->
+        <div class="vp-left reveal">
+            <div class="section-label">Флагманський продукт</div>
+            <h2 class="vp-hl">ViyarPro</h2>
+            <p class="vp-tagline">Integrated Design&#8209;to&#8209;Manufacturing Software</p>
+            <p class="vp-desc">Платформа, що з'єднує CAD-проектування безпосередньо з виробничою екосистемою VIYAR — швидке, безпомилкове замовлення без інсталяції. Доступ 24/7 звідусіль.</p>
+            <div class="vp-caps">
+                <div class="vp-cap">
+                    <div class="vp-cap-title">Проектування без меж</div>
+                    <p class="vp-cap-desc">Унікальні вироби з нуля або з бібліотеки VIYAR. Зміна розмірів — всі отвори та кріплення оновлюються автоматично.</p>
+                </div>
+                <div class="vp-cap">
+                    <div class="vp-cap-title">AI-візуалізація</div>
+                    <p class="vp-cap-desc">Вбудований штучний інтелект показує, як меблі виглядатимуть у реальному інтер'єрі клієнта.</p>
+                </div>
+                <div class="vp-cap">
+                    <div class="vp-cap-title">Миттєве замовлення</div>
+                    <p class="vp-cap-desc">Надсилайте готові замовлення напряму на виробництво за лічені секунди. Актуальні ціни в реальному часі.</p>
+                </div>
+                <div class="vp-cap">
+                    <div class="vp-cap-title">40&thinsp;000 матеріалів</div>
+                    <p class="vp-cap-desc">Повний каталог VIYAR у єдиному цифровому просторі: від базового різання до лазерного гравірування.</p>
+                </div>
+            </div>
+            <div class="vp-links">
+                <a href="https://viyar.pro/main" target="_blank" class="btn-solid">ViyarPro</a>
+                <a href="https://viyar.pro/templates" target="_blank" class="btn-outline">ViyarPro Furniture</a>
             </div>
         </div>
-        <div class="pcard reveal" style="transition-delay:.1s">
-            <div class="pcard-bg"></div>
-            <div class="pcard-ico">🔧</div>
-            <div class="pcard-body">
-                <div class="pcard-tag">Для виробництва</div>
-                <div class="pcard-name">Спеціалізоване ПЗ для виробництва</div>
-                <p class="pcard-desc">Зручний конструктор для вашої роботи та джерело нових замовлень. Спеціалізоване програмне забезпечення для проектування та виробництва меблів.</p>
+        <!-- right col: numbers -->
+        <div class="vp-right reveal" style="transition-delay:.15s">
+            <div class="vp-nums">
+                <div class="vp-num-item">
+                    <div class="vp-big">1М<span class="vp-plus">+</span></div>
+                    <div class="vp-nlbl">комбінацій декорів та матеріалів</div>
+                </div>
+                <div class="vp-num-item">
+                    <div class="vp-big">18K<span class="vp-plus">+</span></div>
+                    <div class="vp-nlbl">активних користувачів</div>
+                </div>
+                <div class="vp-num-item">
+                    <div class="vp-big">4.8М</div>
+                    <div class="vp-nlbl">проектів на рік</div>
+                </div>
+                <div class="vp-num-item">
+                    <div class="vp-big">15</div>
+                    <div class="vp-nlbl">хвилин до готового виробу</div>
+                </div>
+                <div class="vp-num-item">
+                    <div class="vp-big">450<span class="vp-plus">+</span></div>
+                    <div class="vp-nlbl">модулів і шаблонів</div>
+                </div>
+                <div class="vp-num-item">
+                    <div class="vp-big">10<span class="vp-plus">+</span></div>
+                    <div class="vp-nlbl">років розробки платформи</div>
+                </div>
             </div>
-        </div>
-        <div class="pcard reveal" style="transition-delay:.2s">
-            <div class="pcard-bg"></div>
-            <div class="pcard-ico">🤝</div>
-            <div class="pcard-body">
-                <div class="pcard-tag">Платформа</div>
-                <div class="pcard-name">Платформа для майстрів</div>
-                <p class="pcard-desc">Сервіс, що допомагає замовникам і майстрам легко знаходити одне одного! Перевірені професіонали з портфоліо та прозорі ціни.</p>
+            <!-- mini product cards -->
+            <div class="vp-subcards">
+                <div class="vp-sub">
+                    <div class="vp-sub-label">CAD → Production</div>
+                    <div class="vp-sub-name">ViyarPro</div>
+                    <p class="vp-sub-desc">Конфігуратори для панельного виробництва — фасади, панелі, двері, скло, камінь, профілі.</p>
+                </div>
+                <div class="vp-sub">
+                    <div class="vp-sub-label">Ready-to-Manufacture</div>
+                    <div class="vp-sub-name">ViyarPro Furniture</div>
+                    <p class="vp-sub-desc">Хмарна колекція параметричних шаблонів меблів: кухні, шафи, передпокої, ванні, офіс.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- OTHER PRODUCTS -->
+<section class="other-products">
+    <div class="op-wrap">
+        <div class="op-hd reveal">
+            <div class="section-label">Також</div>
+        </div>
+        <div class="op-grid">
+            <div class="op-card reveal">
+                <div class="op-num">01</div>
+                <div class="op-name">Платформа для майстрів</div>
+                <p class="op-desc">Сервіс, що допомагає замовникам і майстрам легко знаходити одне одного. Перевірені професіонали з портфоліо та прозорі ціни.</p>
+            </div>
+            <div class="op-card reveal" style="transition-delay:.1s">
+                <div class="op-num">02</div>
+                <div class="op-name">Спеціалізоване ПЗ</div>
+                <p class="op-desc">Зручний конструктор для вашої роботи та джерело нових замовлень. Спеціалізоване ПЗ для проектування та виробництва меблів.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
 <section class="stats" id="stats">
-    <div class="section-label reveal">Досягнення</div>
+    <div class="section-label reveal">Команда</div>
     <p class="stats-sub reveal" style="transition-delay:.1s">Цифри, які говорять самі за себе. Ми пишаємося нашими результатами та довірою клієнтів.</p>
     <div class="stats-grid">
         <div class="stat reveal">
