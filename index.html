@@ -284,7 +284,7 @@ a{color:inherit}
 }
 .float-nav.show{transform:translate(-50%,0);opacity:1}
 .float-nav a{
-  height:44px;padding:0 16px;border-radius:999px;display:flex;align-items:center;
+  white-space:nowrap;height:44px;padding:0 16px;border-radius:999px;display:flex;align-items:center;
   font-size:14px;color:#c7c9cd;text-decoration:none;transition:background .2s,color .2s
 }
 .float-nav a:hover{color:#fff}
@@ -431,7 +431,7 @@ footer > *{position:relative;z-index:1}
   .float-nav a{padding:0 12px;font-size:13px;height:40px}
 }
 @media (max-width:420px){
-  .float-nav a:not(.cta):nth-child(3){display:none}
+  .float-nav a{padding:0 8px;font-size:12px}
   .hero .actions .btn{flex:1}
 }
 </style>
@@ -441,6 +441,7 @@ footer > *{position:relative;z-index:1}
 <nav class="float-nav" id="fnav" aria-label="Навігація">
   <a href="#services">Послуги</a>
   <a href="#products">Продукти</a>
+  <a href="#team">Команда</a>
   <a href="#ai">AI</a>
   <a href="#contact" class="cta">Написати</a>
 </nav>
